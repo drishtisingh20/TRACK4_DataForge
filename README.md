@@ -1,3 +1,7 @@
+TO RUN THE APPLICATION :
+    - Type "python app.py" or "py app.py" in your project terminal
+
+    
 # Enterprise Contextual Compression Engine
 
 A production-grade preprocessing pipeline for compressing large documents while preserving all decision-critical information and maintaining full traceability to source content.
