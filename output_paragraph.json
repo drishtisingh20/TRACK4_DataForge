@@ -1,0 +1,1297 @@
+{
+  "executive_compressed_summary": [
+    {
+      "statement": "Employee shall serve as Senior Software Engineer.",
+      "source_chunks": [
+        "chunk_4"
+      ],
+      "priority": "risk_penalty"
+    },
+    {
+      "statement": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunks": [
+        "chunk_6"
+      ],
+      "priority": "risk_penalty"
+    },
+    {
+      "statement": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunks": [
+        "chunk_6"
+      ],
+      "priority": "risk_penalty"
+    },
+    {
+      "statement": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunks": [
+        "chunk_6"
+      ],
+      "priority": "compliance_requirement"
+    },
+    {
+      "statement": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunks": [
+        "chunk_6"
+      ],
+      "priority": "number_limit"
+    },
+    {
+      "statement": "Employee shall be entitled to participate in all employee benefit plans maintained by the Company, including health insurance, 401(k) retirement plan with 4% company match, and 15 days paid time off per year.",
+      "source_chunks": [
+        "chunk_8"
+      ],
+      "priority": "number_limit"
+    },
+    {
+      "statement": "Either party may terminate this Agreement with 30 days written notice.",
+      "source_chunks": [
+        "chunk_11"
+      ],
+      "priority": "number_limit"
+    },
+    {
+      "statement": "This Employment Agreement (\"Agreement\") is entered into effective January 1, 2024, between TechCorp Inc.",
+      "source_chunks": [
+        "chunk_2"
+      ],
+      "priority": "date_timeline"
+    },
+    {
+      "statement": "This Agreement shall commence on January 1, 2024 and continue until terminated by either party.",
+      "source_chunks": [
+        "chunk_11"
+      ],
+      "priority": "date_timeline"
+    },
+    {
+      "statement": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunks": [
+        "chunk_6"
+      ],
+      "priority": "exception_condition"
+    }
+  ],
+  "key_facts": [
+    {
+      "statement": "This Employment Agreement (\"Agreement\") is entered into effective January 1, 2024, between TechCorp Inc.",
+      "source_chunks": [
+        "chunk_2"
+      ],
+      "quote": "This Employment Agreement (\"Agreement\") is entered...",
+      "content_type": "objective_fact"
+    },
+    {
+      "statement": "However, benefits are only available to employees who maintain active employment status.",
+      "source_chunks": [
+        "chunk_9"
+      ],
+      "quote": "However, benefits are only available to employees ...",
+      "content_type": "objective_fact"
+    },
+    {
+      "statement": "If employment is terminated for cause, benefits cease immediately.",
+      "source_chunks": [
+        "chunk_9"
+      ],
+      "quote": "If employment is terminated for cause, benefits ce...",
+      "content_type": "objective_fact"
+    },
+    {
+      "statement": "This restriction applies only if Employee is terminated without cause or resigns voluntarily.",
+      "source_chunks": [
+        "chunk_18"
+      ],
+      "quote": "This restriction applies only if Employee is termi...",
+      "content_type": "objective_fact"
+    },
+    {
+      "statement": "It does not apply if Employee is terminated for reasons beyond their control, such as company restructuring or layoffs.",
+      "source_chunks": [
+        "chunk_18"
+      ],
+      "quote": "It does not apply if Employee is terminated for re...",
+      "content_type": "objective_fact"
+    },
+    {
+      "statement": "Minimum performance threshold is 3.0 out of 5.0.",
+      "source_chunks": [
+        "chunk_22"
+      ],
+      "quote": "Minimum performance threshold is 3.0 out of 5.0.",
+      "content_type": "objective_fact"
+    },
+    {
+      "statement": "All unvested options are forfeited upon termination unless terminated without cause.",
+      "source_chunks": [
+        "chunk_25"
+      ],
+      "quote": "All unvested options are forfeited upon terminatio...",
+      "content_type": "objective_fact"
+    }
+  ],
+  "numbers_and_limits": [
+    {
+      "statement": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunks": [
+        "chunk_6"
+      ],
+      "quote": "up to 20",
+      "content_type": "number_limit"
+    },
+    {
+      "statement": "Employee shall be entitled to participate in all employee benefit plans maintained by the Company, including health insurance, 401(k) retirement plan with 4% company match, and 15 days paid time off per year.",
+      "source_chunks": [
+        "chunk_8"
+      ],
+      "quote": "15 days",
+      "content_type": "number_limit"
+    },
+    {
+      "statement": "Either party may terminate this Agreement with 30 days written notice.",
+      "source_chunks": [
+        "chunk_11"
+      ],
+      "quote": "30 days",
+      "content_type": "number_limit"
+    },
+    {
+      "statement": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunks": [
+        "chunk_12"
+      ],
+      "quote": "2 months",
+      "content_type": "number_limit"
+    },
+    {
+      "statement": "This obligation shall survive termination and continue for a period of 5 years after termination date.",
+      "source_chunks": [
+        "chunk_14"
+      ],
+      "quote": "5 years",
+      "content_type": "number_limit"
+    },
+    {
+      "statement": "Employee agrees not to work for direct competitors within a 50-mile radius of Company headquarters for a period of 12 months following termination.",
+      "source_chunks": [
+        "chunk_17"
+      ],
+      "quote": "12 months",
+      "content_type": "number_limit"
+    },
+    {
+      "statement": "Employee must disclose all such works within 30 days of creation.",
+      "source_chunks": [
+        "chunk_20"
+      ],
+      "quote": "30 days",
+      "content_type": "number_limit"
+    },
+    {
+      "statement": "Options vest over 4 years: 25% after first year, then monthly thereafter.",
+      "source_chunks": [
+        "chunk_25"
+      ],
+      "quote": "4 years",
+      "content_type": "number_limit"
+    }
+  ],
+  "dates_and_timelines": [
+    {
+      "statement": "This Employment Agreement (\"Agreement\") is entered into effective January 1, 2024, between TechCorp Inc.",
+      "source_chunks": [
+        "chunk_2"
+      ],
+      "quote": "January 1, 2024",
+      "content_type": "date_timeline"
+    },
+    {
+      "statement": "This Agreement shall commence on January 1, 2024 and continue until terminated by either party.",
+      "source_chunks": [
+        "chunk_11"
+      ],
+      "quote": "January 1, 2024",
+      "content_type": "date_timeline"
+    }
+  ],
+  "exceptions_and_conditions": [
+    {
+      "statement": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunks": [
+        "chunk_6"
+      ],
+      "quote": "subject to",
+      "content_type": "exception_condition"
+    },
+    {
+      "statement": "However, benefits are only available to employees who maintain active employment status.",
+      "source_chunks": [
+        "chunk_9"
+      ],
+      "quote": "However",
+      "content_type": "exception_condition"
+    },
+    {
+      "statement": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunks": [
+        "chunk_12"
+      ],
+      "quote": "Unless",
+      "content_type": "exception_condition"
+    },
+    {
+      "statement": "The Company may terminate employment immediately for cause, including but not limited to: misconduct, breach of confidentiality, or violation of company policies.",
+      "source_chunks": [
+        "chunk_12"
+      ],
+      "quote": "but",
+      "content_type": "exception_condition"
+    },
+    {
+      "statement": "This restriction applies only if Employee is terminated without cause or resigns voluntarily.",
+      "source_chunks": [
+        "chunk_18"
+      ],
+      "quote": "only if",
+      "content_type": "exception_condition"
+    },
+    {
+      "statement": "However, the Annual Review in December carries triple weight and can override quarterly scores.",
+      "source_chunks": [
+        "chunk_23"
+      ],
+      "quote": "However",
+      "content_type": "exception_condition"
+    },
+    {
+      "statement": "All unvested options are forfeited upon termination unless terminated without cause.",
+      "source_chunks": [
+        "chunk_25"
+      ],
+      "quote": "unless",
+      "content_type": "exception_condition"
+    }
+  ],
+  "risks_and_constraints": [
+    {
+      "statement": "Employee shall serve as Senior Software Engineer.",
+      "source_chunks": [
+        "chunk_4"
+      ],
+      "quote": "shall",
+      "content_type": "risk_penalty"
+    },
+    {
+      "statement": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunks": [
+        "chunk_6"
+      ],
+      "quote": "shall",
+      "content_type": "risk_penalty"
+    },
+    {
+      "statement": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunks": [
+        "chunk_6"
+      ],
+      "quote": "shall",
+      "content_type": "risk_penalty"
+    },
+    {
+      "statement": "Employee shall be entitled to participate in all employee benefit plans maintained by the Company, including health insurance, 401(k) retirement plan with 4% company match, and 15 days paid time off per year.",
+      "source_chunks": [
+        "chunk_8"
+      ],
+      "quote": "shall",
+      "content_type": "risk_penalty"
+    },
+    {
+      "statement": "This Agreement shall commence on January 1, 2024 and continue until terminated by either party.",
+      "source_chunks": [
+        "chunk_11"
+      ],
+      "quote": "shall",
+      "content_type": "risk_penalty"
+    },
+    {
+      "statement": "The Company may terminate employment immediately for cause, including but not limited to: misconduct, breach of confidentiality, or violation of company policies.",
+      "source_chunks": [
+        "chunk_12"
+      ],
+      "quote": "breach",
+      "content_type": "risk_penalty"
+    },
+    {
+      "statement": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunks": [
+        "chunk_12"
+      ],
+      "quote": "shall",
+      "content_type": "risk_penalty"
+    },
+    {
+      "statement": "This obligation shall survive termination and continue for a period of 5 years after termination date.",
+      "source_chunks": [
+        "chunk_14"
+      ],
+      "quote": "shall",
+      "content_type": "risk_penalty"
+    },
+    {
+      "statement": "Violation of confidentiality provisions may result in legal action and damages up to $500,000.",
+      "source_chunks": [
+        "chunk_15"
+      ],
+      "quote": "Violation",
+      "content_type": "risk_penalty"
+    },
+    {
+      "statement": "All inventions, discoveries, and creative works developed during employment shall be the exclusive property of the Company.",
+      "source_chunks": [
+        "chunk_20"
+      ],
+      "quote": "shall",
+      "content_type": "risk_penalty"
+    },
+    {
+      "statement": "Employee must disclose all such works within 30 days of creation.",
+      "source_chunks": [
+        "chunk_20"
+      ],
+      "quote": "must",
+      "content_type": "risk_penalty"
+    },
+    {
+      "statement": "Failure to maintain minimum threshold for two consecutive quarters may result in termination.",
+      "source_chunks": [
+        "chunk_22"
+      ],
+      "quote": "Failure to",
+      "content_type": "risk_penalty"
+    },
+    {
+      "statement": "Employee shall be granted 10,000 stock options at a strike price of $10.",
+      "source_chunks": [
+        "chunk_25"
+      ],
+      "quote": "shall",
+      "content_type": "risk_penalty"
+    },
+    {
+      "statement": "No verbal agreements or modifications shall be valid.",
+      "source_chunks": [
+        "chunk_27"
+      ],
+      "quote": "shall",
+      "content_type": "risk_penalty"
+    },
+    {
+      "statement": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunks": [
+        "chunk_6"
+      ],
+      "quote": "standard",
+      "content_type": "compliance_requirement"
+    }
+  ],
+  "contradictions": [
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_2": "chunk_6",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_2": "chunk_6",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be entitled to participate in all employee benefit plans maintained by the Company, including health insurance, 401(k) retirement plan with 4% company match, and 15 days paid time off per year.",
+      "source_chunk_2": "chunk_8",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be entitled to participate in all employee benefit plans maintained by the Company, including health insurance, 401(k) retirement plan with 4% company match, and 15 days paid time off per year.",
+      "source_chunk_2": "chunk_8",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee agrees not to work for direct competitors within a 50-mile radius of Company headquarters for a period of 12 months following termination.",
+      "source_chunk_2": "chunk_17",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be granted 10,000 stock options at a strike price of $10.",
+      "source_chunk_2": "chunk_25",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_2": "chunk_6",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_2": "chunk_6",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be entitled to participate in all employee benefit plans maintained by the Company, including health insurance, 401(k) retirement plan with 4% company match, and 15 days paid time off per year.",
+      "source_chunk_2": "chunk_8",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be entitled to participate in all employee benefit plans maintained by the Company, including health insurance, 401(k) retirement plan with 4% company match, and 15 days paid time off per year.",
+      "source_chunk_2": "chunk_8",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee agrees not to work for direct competitors within a 50-mile radius of Company headquarters for a period of 12 months following termination.",
+      "source_chunk_2": "chunk_17",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be granted 10,000 stock options at a strike price of $10.",
+      "source_chunk_2": "chunk_25",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_2": "chunk_6",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_2": "chunk_6",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be entitled to participate in all employee benefit plans maintained by the Company, including health insurance, 401(k) retirement plan with 4% company match, and 15 days paid time off per year.",
+      "source_chunk_2": "chunk_8",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be entitled to participate in all employee benefit plans maintained by the Company, including health insurance, 401(k) retirement plan with 4% company match, and 15 days paid time off per year.",
+      "source_chunk_2": "chunk_8",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee agrees not to work for direct competitors within a 50-mile radius of Company headquarters for a period of 12 months following termination.",
+      "source_chunk_2": "chunk_17",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be granted 10,000 stock options at a strike price of $10.",
+      "source_chunk_2": "chunk_25",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_2": "chunk_6",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be entitled to participate in all employee benefit plans maintained by the Company, including health insurance, 401(k) retirement plan with 4% company match, and 15 days paid time off per year.",
+      "source_chunk_2": "chunk_8",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be entitled to participate in all employee benefit plans maintained by the Company, including health insurance, 401(k) retirement plan with 4% company match, and 15 days paid time off per year.",
+      "source_chunk_2": "chunk_8",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee agrees not to work for direct competitors within a 50-mile radius of Company headquarters for a period of 12 months following termination.",
+      "source_chunk_2": "chunk_17",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be granted 10,000 stock options at a strike price of $10.",
+      "source_chunk_2": "chunk_25",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_2": "chunk_6",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be entitled to participate in all employee benefit plans maintained by the Company, including health insurance, 401(k) retirement plan with 4% company match, and 15 days paid time off per year.",
+      "source_chunk_2": "chunk_8",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be entitled to participate in all employee benefit plans maintained by the Company, including health insurance, 401(k) retirement plan with 4% company match, and 15 days paid time off per year.",
+      "source_chunk_2": "chunk_8",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee agrees not to work for direct competitors within a 50-mile radius of Company headquarters for a period of 12 months following termination.",
+      "source_chunk_2": "chunk_17",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to achievement of performance objectives.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be granted 10,000 stock options at a strike price of $10.",
+      "source_chunk_2": "chunk_25",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be entitled to participate in all employee benefit plans maintained by the Company, including health insurance, 401(k) retirement plan with 4% company match, and 15 days paid time off per year.",
+      "source_chunk_2": "chunk_8",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be entitled to participate in all employee benefit plans maintained by the Company, including health insurance, 401(k) retirement plan with 4% company match, and 15 days paid time off per year.",
+      "source_chunk_2": "chunk_8",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_2": "chunk_12",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee agrees not to work for direct competitors within a 50-mile radius of Company headquarters for a period of 12 months following termination.",
+      "source_chunk_2": "chunk_17",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Company's standard payroll schedule.",
+      "source_chunk_1": "chunk_6",
+      "statement_2": "Employee shall be granted 10,000 stock options at a strike price of $10.",
+      "source_chunk_2": "chunk_25",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Either party may terminate this Agreement with 30 days written notice.",
+      "source_chunk_1": "chunk_11",
+      "statement_2": "This Agreement shall commence on January 1, 2024 and continue until terminated by either party.",
+      "source_chunk_2": "chunk_11",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Either party may terminate this Agreement with 30 days written notice.",
+      "source_chunk_1": "chunk_11",
+      "statement_2": "This Agreement shall commence on January 1, 2024 and continue until terminated by either party.",
+      "source_chunk_2": "chunk_11",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "This Agreement shall commence on January 1, 2024 and continue until terminated by either party.",
+      "source_chunk_1": "chunk_11",
+      "statement_2": "This obligation shall survive termination and continue for a period of 5 years after termination date.",
+      "source_chunk_2": "chunk_14",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "This Agreement shall commence on January 1, 2024 and continue until terminated by either party.",
+      "source_chunk_1": "chunk_11",
+      "statement_2": "This obligation shall survive termination and continue for a period of 5 years after termination date.",
+      "source_chunk_2": "chunk_14",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "This Agreement shall commence on January 1, 2024 and continue until terminated by either party.",
+      "source_chunk_1": "chunk_11",
+      "statement_2": "This obligation shall survive termination and continue for a period of 5 years after termination date.",
+      "source_chunk_2": "chunk_14",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "This Agreement shall commence on January 1, 2024 and continue until terminated by either party.",
+      "source_chunk_1": "chunk_11",
+      "statement_2": "This obligation shall survive termination and continue for a period of 5 years after termination date.",
+      "source_chunk_2": "chunk_14",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_1": "chunk_12",
+      "statement_2": "Employee agrees not to work for direct competitors within a 50-mile radius of Company headquarters for a period of 12 months following termination.",
+      "source_chunk_2": "chunk_17",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_1": "chunk_12",
+      "statement_2": "Employee agrees not to work for direct competitors within a 50-mile radius of Company headquarters for a period of 12 months following termination.",
+      "source_chunk_2": "chunk_17",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "source_chunk_1": "chunk_12",
+      "statement_2": "Employee agrees not to work for direct competitors within a 50-mile radius of Company headquarters for a period of 12 months following termination.",
+      "source_chunk_2": "chunk_17",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "This obligation shall survive termination and continue for a period of 5 years after termination date.",
+      "source_chunk_1": "chunk_14",
+      "statement_2": "Employee agrees not to work for direct competitors within a 50-mile radius of Company headquarters for a period of 12 months following termination.",
+      "source_chunk_2": "chunk_17",
+      "contradiction_type": "potential_conflict"
+    },
+    {
+      "statement_1": "This obligation shall survive termination and continue for a period of 5 years after termination date.",
+      "source_chunk_1": "chunk_14",
+      "statement_2": "Employee agrees not to work for direct competitors within a 50-mile radius of Company headquarters for a period of 12 months following termination.",
+      "source_chunk_2": "chunk_17",
+      "contradiction_type": "potential_conflict"
+    }
+  ],
+  "traceability_map": {
+    "stmt_1": [
+      "chunk_4"
+    ],
+    "stmt_2": [
+      "chunk_6"
+    ],
+    "stmt_3": [
+      "chunk_6"
+    ],
+    "stmt_4": [
+      "chunk_6"
+    ],
+    "stmt_5": [
+      "chunk_6"
+    ],
+    "stmt_6": [
+      "chunk_8"
+    ],
+    "stmt_7": [
+      "chunk_11"
+    ],
+    "stmt_8": [
+      "chunk_2"
+    ],
+    "stmt_9": [
+      "chunk_11"
+    ],
+    "stmt_10": [
+      "chunk_6"
+    ],
+    "stmt_11": [
+      "chunk_2"
+    ],
+    "stmt_12": [
+      "chunk_9"
+    ],
+    "stmt_13": [
+      "chunk_9"
+    ],
+    "stmt_14": [
+      "chunk_18"
+    ],
+    "stmt_15": [
+      "chunk_18"
+    ],
+    "stmt_16": [
+      "chunk_22"
+    ],
+    "stmt_17": [
+      "chunk_25"
+    ],
+    "stmt_18": [
+      "chunk_6"
+    ],
+    "stmt_19": [
+      "chunk_8"
+    ],
+    "stmt_20": [
+      "chunk_11"
+    ],
+    "stmt_21": [
+      "chunk_12"
+    ],
+    "stmt_22": [
+      "chunk_14"
+    ],
+    "stmt_23": [
+      "chunk_17"
+    ],
+    "stmt_24": [
+      "chunk_20"
+    ],
+    "stmt_25": [
+      "chunk_25"
+    ],
+    "stmt_26": [
+      "chunk_2"
+    ],
+    "stmt_27": [
+      "chunk_11"
+    ],
+    "stmt_28": [
+      "chunk_6"
+    ],
+    "stmt_29": [
+      "chunk_9"
+    ],
+    "stmt_30": [
+      "chunk_12"
+    ],
+    "stmt_31": [
+      "chunk_12"
+    ],
+    "stmt_32": [
+      "chunk_18"
+    ],
+    "stmt_33": [
+      "chunk_23"
+    ],
+    "stmt_34": [
+      "chunk_25"
+    ],
+    "stmt_35": [
+      "chunk_4"
+    ],
+    "stmt_36": [
+      "chunk_6"
+    ],
+    "stmt_37": [
+      "chunk_6"
+    ],
+    "stmt_38": [
+      "chunk_8"
+    ],
+    "stmt_39": [
+      "chunk_11"
+    ],
+    "stmt_40": [
+      "chunk_12"
+    ],
+    "stmt_41": [
+      "chunk_12"
+    ],
+    "stmt_42": [
+      "chunk_14"
+    ],
+    "stmt_43": [
+      "chunk_15"
+    ],
+    "stmt_44": [
+      "chunk_20"
+    ],
+    "stmt_45": [
+      "chunk_20"
+    ],
+    "stmt_46": [
+      "chunk_22"
+    ],
+    "stmt_47": [
+      "chunk_25"
+    ],
+    "stmt_48": [
+      "chunk_27"
+    ],
+    "stmt_49": [
+      "chunk_6"
+    ]
+  },
+  "explainability": [
+    {
+      "statement": "This Employment Agreement (\"Agreement\") is entered into effective January 1, 2024, between TechCorp ...",
+      "included_because": "Contains date or timeline information",
+      "source_chunk": "chunk_2",
+      "content_type": "date_timeline",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "This Employment Agreement (\"Agreement\") is entered into effective January 1, 2024, between TechCorp ...",
+      "included_because": "Contains date or timeline information",
+      "source_chunk": "chunk_2",
+      "content_type": "date_timeline",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "This Employment Agreement (\"Agreement\") is entered into effective January 1, 2024, between TechCorp ...",
+      "included_because": "Contains objective factual assertion",
+      "source_chunk": "chunk_2",
+      "content_type": "objective_fact",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Employee shall serve as Senior Software Engineer.",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_4",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to a...",
+      "included_because": "Contains specific numerical threshold or limit",
+      "source_chunk": "chunk_6",
+      "content_type": "number_limit",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to a...",
+      "included_because": "Contains exception or conditional requirement",
+      "source_chunk": "chunk_6",
+      "content_type": "exception_condition",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Co...",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_6",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to a...",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_6",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Employee shall be eligible for an annual performance bonus of up to 20% of base salary, subject to a...",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_6",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "The Company shall pay Employee a base salary of $150,000 per year, payable in accordance with the Co...",
+      "included_because": "Contains compliance or regulatory requirement",
+      "source_chunk": "chunk_6",
+      "content_type": "compliance_requirement",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Employee shall be entitled to participate in all employee benefit plans maintained by the Company, i...",
+      "included_because": "Contains specific numerical threshold or limit",
+      "source_chunk": "chunk_8",
+      "content_type": "number_limit",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Employee shall be entitled to participate in all employee benefit plans maintained by the Company, i...",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_8",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "However, benefits are only available to employees who maintain active employment status.",
+      "included_because": "Contains exception or conditional requirement",
+      "source_chunk": "chunk_9",
+      "content_type": "exception_condition",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "However, benefits are only available to employees who maintain active employment status.",
+      "included_because": "Contains objective factual assertion",
+      "source_chunk": "chunk_9",
+      "content_type": "objective_fact",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "If employment is terminated for cause, benefits cease immediately.",
+      "included_because": "Contains objective factual assertion",
+      "source_chunk": "chunk_9",
+      "content_type": "objective_fact",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Either party may terminate this Agreement with 30 days written notice.",
+      "included_because": "Contains specific numerical threshold or limit",
+      "source_chunk": "chunk_11",
+      "content_type": "number_limit",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "This Agreement shall commence on January 1, 2024 and continue until terminated by either party.",
+      "included_because": "Contains date or timeline information",
+      "source_chunk": "chunk_11",
+      "content_type": "date_timeline",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "This Agreement shall commence on January 1, 2024 and continue until terminated by either party.",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_11",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "included_because": "Contains specific numerical threshold or limit",
+      "source_chunk": "chunk_12",
+      "content_type": "number_limit",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "included_because": "Contains exception or conditional requirement",
+      "source_chunk": "chunk_12",
+      "content_type": "exception_condition",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "The Company may terminate employment immediately for cause, including but not limited to: misconduct...",
+      "included_because": "Contains exception or conditional requirement",
+      "source_chunk": "chunk_12",
+      "content_type": "exception_condition",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "The Company may terminate employment immediately for cause, including but not limited to: misconduct...",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_12",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "The Company may terminate employment immediately for cause, including but not limited to: misconduct...",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_12",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Unless terminated for cause, Employee shall receive severance pay equal to 2 months base salary.",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_12",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "This obligation shall survive termination and continue for a period of 5 years after termination dat...",
+      "included_because": "Contains specific numerical threshold or limit",
+      "source_chunk": "chunk_14",
+      "content_type": "number_limit",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "This obligation shall survive termination and continue for a period of 5 years after termination dat...",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_14",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Violation of confidentiality provisions may result in legal action and damages up to $500,000.",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_15",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Violation of confidentiality provisions may result in legal action and damages up to $500,000.",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_15",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Violation of confidentiality provisions may result in legal action and damages up to $500,000.",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_15",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Employee agrees not to work for direct competitors within a 50-mile radius of Company headquarters f...",
+      "included_because": "Contains specific numerical threshold or limit",
+      "source_chunk": "chunk_17",
+      "content_type": "number_limit",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "This restriction applies only if Employee is terminated without cause or resigns voluntarily.",
+      "included_because": "Contains exception or conditional requirement",
+      "source_chunk": "chunk_18",
+      "content_type": "exception_condition",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "This restriction applies only if Employee is terminated without cause or resigns voluntarily.",
+      "included_because": "Contains objective factual assertion",
+      "source_chunk": "chunk_18",
+      "content_type": "objective_fact",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "It does not apply if Employee is terminated for reasons beyond their control, such as company restru...",
+      "included_because": "Contains objective factual assertion",
+      "source_chunk": "chunk_18",
+      "content_type": "objective_fact",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Employee must disclose all such works within 30 days of creation.",
+      "included_because": "Contains specific numerical threshold or limit",
+      "source_chunk": "chunk_20",
+      "content_type": "number_limit",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "All inventions, discoveries, and creative works developed during employment shall be the exclusive p...",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_20",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Employee must disclose all such works within 30 days of creation.",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_20",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Failure to maintain minimum threshold for two consecutive quarters may result in termination.",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_22",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Failure to maintain minimum threshold for two consecutive quarters may result in termination.",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_22",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Minimum performance threshold is 3.0 out of 5.0.",
+      "included_because": "Contains objective factual assertion",
+      "source_chunk": "chunk_22",
+      "content_type": "objective_fact",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "However, the Annual Review in December carries triple weight and can override quarterly scores.",
+      "included_because": "Contains exception or conditional requirement",
+      "source_chunk": "chunk_23",
+      "content_type": "exception_condition",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Options vest over 4 years: 25% after first year, then monthly thereafter.",
+      "included_because": "Contains specific numerical threshold or limit",
+      "source_chunk": "chunk_25",
+      "content_type": "number_limit",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "All unvested options are forfeited upon termination unless terminated without cause.",
+      "included_because": "Contains exception or conditional requirement",
+      "source_chunk": "chunk_25",
+      "content_type": "exception_condition",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "Employee shall be granted 10,000 stock options at a strike price of $10.",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_25",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "All unvested options are forfeited upon termination unless terminated without cause.",
+      "included_because": "Contains objective factual assertion",
+      "source_chunk": "chunk_25",
+      "content_type": "objective_fact",
+      "removed_content_reason": null
+    },
+    {
+      "statement": "No verbal agreements or modifications shall be valid.",
+      "included_because": "Contains risk, penalty, or mandatory requirement",
+      "source_chunk": "chunk_27",
+      "content_type": "risk_penalty",
+      "removed_content_reason": null
+    }
+  ],
+  "metadata": {
+    "total_chunks": 27,
+    "total_extracted_items": 45,
+    "compression_ratio": 15.38,
+    "chunk_strategy": "paragraph"
+  }
+}

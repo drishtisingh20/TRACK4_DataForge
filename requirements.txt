@@ -1,0 +1,18 @@
+# Enterprise Contextual Compression Engine
+# Python 3.7 or higher required
+
+# Core (compression engine) - standard library only
+
+# Web dashboard with upload & chat (LLM summarization + chat via Google AI Studio):
+flask>=2.0.0
+google-genai>=1.0.0
+python-dotenv>=1.0.0
+
+# Document upload support (optional but recommended):
+PyPDF2>=3.0.0
+python-docx>=0.8.11
+
+# Optional for other use cases:
+# pandas  # CSV/DataFrame output
+# openpyxl  # Excel integration
+# nltk  # Enhanced NLP features

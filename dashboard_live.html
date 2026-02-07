@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compression Engine Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .header p { opacity: 0.9; font-size: 1.1em; }
+        .upload-section {
+            padding: 30px 40px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+        }
+        .upload-zone {
+            border: 2px dashed #667eea;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            background: #fff;
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .upload-zone:hover, .upload-zone.dragover { background: #e7f0ff; border-color: #764ba2; }
+        .upload-zone input { display: none; }
+        .upload-zone .icon { font-size: 3em; margin-bottom: 10px; color: #667eea; }
+        .upload-zone .hint { color: #6c757d; font-size: 0.95em; }
+        .upload-zone .formats { margin-top: 8px; font-size: 0.85em; color: #667eea; }
+        .upload-options { margin-top: 15px; display: flex; gap: 15px; align-items: center; justify-content: center; flex-wrap: wrap; }
+        .upload-options label { display: flex; align-items: center; gap: 8px; }
+        .upload-options select { padding: 8px 12px; border-radius: 8px; border: 1px solid #ddd; }
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(102,126,234,0.4); }
+        .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+        .current-file { margin-top: 12px; font-size: 0.9em; color: #667eea; }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            background: #f8f9fa;
+        }
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .stat-card:hover { transform: translateY(-5px); box-shadow: 0 8px 12px rgba(0,0,0,0.15); }
+        .stat-label { color: #6c757d; font-size: 0.9em; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+        .stat-value { font-size: 2.5em; font-weight: bold; color: #667eea; }
+        .content-section { padding: 40px; }
+        .section-title { font-size: 1.8em; margin-bottom: 20px; color: #667eea; border-bottom: 3px solid #667eea; padding-bottom: 10px; }
+        .item-list { list-style: none; }
+        .item {
+            background: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        .item:hover { background: #e9ecef; border-left-width: 8px; }
+        .item-statement { font-size: 1.1em; margin-bottom: 10px; line-height: 1.6; }
+        .item-meta { display: flex; gap: 20px; font-size: 0.9em; color: #6c757d; flex-wrap: wrap; }
+        .badge { background: #667eea; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85em; display: inline-block; }
+        .badge-warning { background: #ffc107; color: #333; }
+        .badge-danger { background: #dc3545; }
+        .badge-success { background: #28a745; }
+        .contradiction { background: #fff3cd; border-left-color: #ffc107; }
+        .tabs { display: flex; gap: 10px; margin-bottom: 30px; border-bottom: 2px solid #e9ecef; flex-wrap: wrap; }
+        .tab { padding: 15px 30px; cursor: pointer; border: none; background: none; font-size: 1.1em; color: #6c757d; transition: all 0.3s ease; border-bottom: 3px solid transparent; }
+        .tab:hover { color: #667eea; }
+        .tab.active { color: #667eea; border-bottom-color: #667eea; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .quote { background: #e7f3ff; padding: 3px 8px; border-radius: 4px; font-family: 'Courier New', monospace; font-weight: bold; color: #0056b3; }
+        .timeline { position: relative; padding-left: 30px; }
+        .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #667eea; }
+        .timeline-item { position: relative; padding-bottom: 30px; }
+        .timeline-item::before { content: ''; position: absolute; left: -35px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #667eea; border: 3px solid white; box-shadow: 0 0 0 2px #667eea; }
+        .dashboard-placeholder {
+            padding: 60px 40px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 1.1em;
+        }
+        .dashboard-placeholder .icon { font-size: 4em; margin-bottom: 20px; opacity: 0.5; }
+        .chat-section {
+            padding: 30px 40px;
+            background: linear-gradient(180deg, #f8f9fa 0%, #fff 100%);
+            border-top: 2px solid #e9ecef;
+        }
+        .chat-section h2 { margin-bottom: 20px; color: #667eea; font-size: 1.5em; }
+        .chat-box {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .chat-message { margin-bottom: 16px; padding: 12px 16px; border-radius: 10px; max-width: 90%; }
+        .chat-message.user { background: #667eea; color: white; margin-left: auto; }
+        .chat-message.bot { background: #f0f2f5; color: #333; white-space: pre-wrap; }
+        .chat-message .label { font-size: 0.75em; opacity: 0.8; margin-bottom: 4px; }
+        .chat-input-row { display: flex; gap: 10px; align-items: stretch; }
+        .chat-input-row input { flex: 1; padding: 14px 18px; border: 2px solid #e9ecef; border-radius: 10px; font-size: 1em; }
+        .chat-input-row input:focus { outline: none; border-color: #667eea; }
+        .chat-input-row .btn { flex-shrink: 0; }
+        .chat-hint { font-size: 0.85em; color: #6c757d; margin-top: 8px; }
+        .error-msg { background: #fff3cd; color: #856404; padding: 12px; border-radius: 8px; margin-top: 10px; white-space: pre-wrap; font-size: 0.9em; max-height: 200px; overflow-y: auto; }
+        .llm-summary-text { white-space: pre-wrap; line-height: 1.7; padding: 10px 0; }
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Compression Analysis Dashboard</h1>
+        </div>
+
+        <div class="upload-section">
+            <div class="upload-zone" id="uploadZone" onclick="document.getElementById('fileInput').click()">
+                <div class="icon">📄</div>
+                <div class="hint">Click or drag a file here to summarize with the LLM</div>
+                <div class="formats">Supported: .txt, .pdf, .docx</div>
+                <input type="file" id="fileInput" accept=".txt,.pdf,.docx,.doc">
+                <div class="upload-options">
+                    <label>Chunk strategy:
+                        <select id="chunkStrategy">
+                            <option value="paragraph">Paragraph</option>
+                            <option value="section">Section</option>
+                            <option value="sentence">Sentence</option>
+                            <option value="fixed_size">Fixed size</option>
+                        </select>
+                    </label>
+                    <button type="button" class="btn btn-primary" id="summarizeBtn" disabled>Summarize with LLM</button>
+                </div>
+                <div class="current-file" id="currentFile"></div>
+                <div id="uploadError" class="error-msg hidden"></div>
+            </div>
+        </div>
+
+        <div id="dashboardPlaceholder" class="dashboard-placeholder">
+            <div class="icon">📋</div>
+            <p>No document loaded. Upload a file above to see the summary dashboard.</p>
+        </div>
+
+        <div id="dashboardContent" class="hidden">
+            <div class="stats-grid" id="statsGrid"></div>
+            <div class="content-section">
+                <div class="tabs">
+                    <button class="tab active" data-tab="llm-summary">Summary</button>
+                    <button class="tab" data-tab="executive">Extracted Summary</button>
+                    <button class="tab" data-tab="numbers">Numbers & Limits</button>
+                    <button class="tab" data-tab="dates">Dates & Timelines</button>
+                    <button class="tab" data-tab="exceptions">Exceptions</button>
+                    <button class="tab" data-tab="risks">Risks</button>
+                    <button class="tab" data-tab="contradictions">Contradictions</button>
+                </div>
+                <div id="llm-summary" class="tab-content active"></div>
+                <div id="executive" class="tab-content"></div>
+                <div id="numbers" class="tab-content"></div>
+                <div id="dates" class="tab-content"></div>
+                <div id="exceptions" class="tab-content"></div>
+                <div id="risks" class="tab-content"></div>
+                <div id="contradictions" class="tab-content"></div>
+            </div>
+        </div>
+
+        <div class="chat-section">
+            <h2>💬 Ask away !</h2>
+            <div class="chat-box" id="chatBox">
+                <div class="chat-message bot">
+                    <div class="label">Assistant</div>
+                    Ask what you want regarding the summary.
+                </div>
+            </div>
+            <div class="chat-input-row">
+                <input type="text" id="chatInput" placeholder="e.g. What are the key deadlines? Summarize chapter 3." autocomplete="off">
+                <button type="button" class="btn btn-primary" id="chatSend">Send</button>
+            </div>
+            <div class="chat-hint" id="chatHint"></div>
+        </div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const uploadZone = document.getElementById('uploadZone');
+        const summarizeBtn = document.getElementById('summarizeBtn');
+        const currentFileEl = document.getElementById('currentFile');
+        const uploadError = document.getElementById('uploadError');
+        const dashboardPlaceholder = document.getElementById('dashboardPlaceholder');
+        const dashboardContent = document.getElementById('dashboardContent');
+        const statsGrid = document.getElementById('statsGrid');
+        const chatBox = document.getElementById('chatBox');
+        const chatInput = document.getElementById('chatInput');
+        const chatSend = document.getElementById('chatSend');
+        const chatHint = document.getElementById('chatHint');
+
+        let selectedFile = null;
+
+        uploadZone.addEventListener('dragover', (e) => { e.preventDefault(); uploadZone.classList.add('dragover'); });
+        uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('dragover'));
+        uploadZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadZone.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length) setFile(files[0]);
+        });
+        fileInput.addEventListener('change', () => { if (fileInput.files.length) setFile(fileInput.files[0]); });
+
+        function setFile(file) {
+            const ext = (file.name || '').split('.').pop().toLowerCase();
+            if (!['txt', 'pdf', 'docx', 'doc'].includes(ext)) {
+                showUploadError('Unsupported format. Use .txt, .pdf, or .docx');
+                return;
+            }
+            selectedFile = file;
+            currentFileEl.textContent = 'Selected: ' + file.name;
+            summarizeBtn.disabled = false;
+            uploadError.classList.add('hidden');
+        }
+
+        function showUploadError(msg) {
+            uploadError.textContent = msg;
+            uploadError.classList.remove('hidden');
+        }
+
+        summarizeBtn.addEventListener('click', async () => {
+            if (!selectedFile) return;
+            summarizeBtn.disabled = true;
+            summarizeBtn.textContent = 'Processing…';
+            uploadError.classList.add('hidden');
+            const formData = new FormData();
+            formData.append('file', selectedFile);
+            formData.append('chunk_strategy', document.getElementById('chunkStrategy').value);
+            try {
+                const res = await fetch('/api/upload', { method: 'POST', body: formData });
+                let data = {};
+                try {
+                    const text = await res.text();
+                    data = text ? JSON.parse(text) : {};
+                } catch (_) {
+                    data = { error: res.statusText || 'Upload failed' };
+                }
+                if (!res.ok) {
+                    const msg = data.error || data.detail || 'Upload failed';
+                    const detail = data.detail && data.detail !== msg ? '\n' + data.detail : '';
+                    showUploadError(msg + detail);
+                    return;
+                }
+                renderDashboard(data);
+                dashboardPlaceholder.classList.add('hidden');
+                dashboardContent.classList.remove('hidden');
+                chatHint.textContent = 'You can chat with the LLM about "' + selectedFile.name + '".';
+            } catch (e) {
+                showUploadError('Network error: ' + (e.message || String(e)));
+            } finally {
+                summarizeBtn.disabled = false;
+                summarizeBtn.textContent = 'Summarize';
+            }
+        });
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        const priorityBadges = {
+            risk_penalty: '<span class="badge badge-danger">🚨 Risk/Penalty</span>',
+            compliance_requirement: '<span class="badge badge-danger">📋 Compliance</span>',
+            number_limit: '<span class="badge">💰 Number/Limit</span>',
+            date_timeline: '<span class="badge">📅 Date/Timeline</span>',
+            exception_condition: '<span class="badge badge-warning">⚠️ Exception</span>',
+            objective_fact: '<span class="badge badge-success">✓ Fact</span>'
+        };
+
+        function renderDashboard(result) {
+            const meta = result.metadata || {};
+            statsGrid.innerHTML = `
+                <div class="stat-card"><div class="stat-label">Total Chunks</div><div class="stat-value">${meta.total_chunks ?? 0}</div></div>
+                <div class="stat-card"><div class="stat-label">Items Extracted</div><div class="stat-value">${meta.total_extracted_items ?? 0}</div></div>
+                <div class="stat-card"><div class="stat-label">Compression Ratio</div><div class="stat-value">${(meta.compression_ratio ?? 0).toFixed(2)}x</div></div>
+                <div class="stat-card"><div class="stat-label">Strategy</div><div class="stat-value" style="font-size:1.5em">${escapeHtml(meta.chunk_strategy || '')}</div></div>
+            `;
+
+            const llmSummary = result.llm_summary || '';
+            const llmError = result.llm_summary_error || '';
+            document.getElementById('llm-summary').innerHTML = '<h2 class="section-title">🤖 LLM Summary</h2>' +
+                (llmError ? '<div class="error-msg">' + escapeHtml(llmError) + '</div>' : '') +
+                (llmSummary ? '<div class="llm-summary-text">' + escapeHtml(llmSummary).replace(/\n/g, '<br>') + '</div>' : '<div class="item">No LLM summary. Provide your API key and summarize again.</div>');
+
+            const exec = result.executive_compressed_summary || [];
+            document.getElementById('executive').innerHTML = '<h2 class="section-title">⚡ Executive Summary</h2><ul class="item-list">' +
+                (exec.length ? exec.slice(0, 10).map(item => `
+                    <li class="item">
+                        <div class="item-statement">${escapeHtml(item.statement)}</div>
+                        <div class="item-meta">
+                            <span>${priorityBadges[item.priority] || '<span class="badge">Info</span>'}</span>
+                            <span>Source: ${(item.source_chunks || []).join(', ')}</span>
+                        </div>
+                    </li>
+                `).join('') : '<li class="item">No executive summary items found</li>') + '</ul>';
+
+            function itemsList(items, title, icon) {
+                const list = items || [];
+                return '<h2 class="section-title">' + icon + ' ' + title + '</h2><ul class="item-list">' +
+                    (list.length ? list.map(item => `
+                        <li class="item">
+                            <div class="item-statement">${escapeHtml(item.statement)}</div>
+                            <div class="item-meta">
+                                ${item.quote ? '<span>Value: <span class="quote">' + escapeHtml(item.quote) + '</span></span>' : ''}
+                                <span>Source: ${(item.source_chunks || []).join(', ')}</span>
+                            </div>
+                        </li>
+                    `).join('') : '<li class="item">No items in this category</li>') + '</ul>';
+            }
+
+            document.getElementById('numbers').innerHTML = itemsList(result.numbers_and_limits, 'Numbers and Limits', '💰');
+            document.getElementById('exceptions').innerHTML = itemsList(result.exceptions_and_conditions, 'Exceptions and Conditions', '⚠️');
+            document.getElementById('risks').innerHTML = itemsList(result.risks_and_constraints, 'Risks and Constraints', '🚨');
+
+            const dates = result.dates_and_timelines || [];
+            document.getElementById('dates').innerHTML = '<h2 class="section-title">📅 Dates and Timelines</h2><div class="timeline">' +
+                (dates.length ? dates.map(item => `
+                    <div class="timeline-item">
+                        <div class="item">
+                            <div class="item-statement">${escapeHtml(item.statement)}</div>
+                            <div class="item-meta">
+                                <span class="quote">${escapeHtml(item.quote || '')}</span>
+                                <span>Source: ${(item.source_chunks || []).join(', ')}</span>
+                            </div>
+                        </div>
+                    </div>
+                `).join('') : '<div class="item">No timeline items found</div>') + '</div>';
+
+            const contradictions = result.contradictions || [];
+            document.getElementById('contradictions').innerHTML = '<h2 class="section-title">❗ Contradictions Detected</h2>' +
+                (contradictions.length ? '<ul class="item-list">' + contradictions.slice(0, 10).map((c, i) => `
+                    <li class="item contradiction">
+                        <div class="item-statement"><strong>Contradiction #${i + 1}</strong></div>
+                        <div style="margin-top:15px">
+                            <div><span class="badge badge-warning">Statement 1 (${escapeHtml(c.source_chunk_1 || '')})</span></div>
+                            <p style="margin:10px 0">${escapeHtml(c.statement_1 || '')}</p>
+                            <div><span class="badge badge-warning">Statement 2 (${escapeHtml(c.source_chunk_2 || '')})</span></div>
+                            <p style="margin:10px 0">${escapeHtml(c.statement_2 || '')}</p>
+                        </div>
+                    </li>
+                `).join('') + '</ul>' : '<div class="item"><strong>✅ No contradictions detected</strong></div>');
+
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    document.getElementById(this.dataset.tab).classList.add('active');
+                });
+            });
+        }
+
+        function addChatMessage(role, text) {
+            const div = document.createElement('div');
+            div.className = 'chat-message ' + role;
+            div.innerHTML = '<div class="label">' + (role === 'user' ? 'You' : 'Assistant') + '</div>' + escapeHtml(text).replace(/\n/g, '<br>');
+            chatBox.appendChild(div);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        async function sendChat() {
+            const q = chatInput.value.trim();
+            if (!q) return;
+            chatInput.value = '';
+            addChatMessage('user', q);
+            chatSend.disabled = true;
+            try {
+                const res = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ question: q })
+                });
+                const data = await res.json().catch(() => ({}));
+                addChatMessage('bot', data.answer || (data.error || 'Sorry, I could not get an answer.'));
+            } catch (e) {
+                addChatMessage('bot', 'Error: ' + e.message);
+            } finally {
+                chatSend.disabled = false;
+            }
+        }
+
+        chatSend.addEventListener('click', sendChat);
+        chatInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') sendChat(); });
+    </script>
+</body>
+</html>
