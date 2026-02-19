@@ -6,9 +6,9 @@ TO RUN THE APPLICATION :
 
 A production-grade preprocessing pipeline for compressing large documents while preserving all decision-critical information and maintaining full traceability to source content.
 
-## 🎯 What This Is NOT
+## 🎯 Features :
 
-This is **NOT** traditional summarization. This system:
+This system:
 - **Extracts** decision-critical facts, not summaries
 - **Preserves** exact numbers, dates, conditions, and exceptions
 - **Maintains** full traceability to source chunks
@@ -360,14 +360,6 @@ for chunk in chunks:
     if chunk.chunk_id in source_chunks:
         print(f"Original: {chunk.content}")
 ```
-
-## ⚠️ Important Rules
-
-1. **No Hallucination**: System only extracts what's explicitly present
-2. **Preserve Exactness**: Numbers, dates, and terms are never modified
-3. **Maintain Traceability**: Every statement links to source chunks
-4. **Surface Contradictions**: Conflicts are shown, not resolved
-5. **Exclude Narrative**: Background and explanations are removed
 
 ## 🧪 Testing
 
